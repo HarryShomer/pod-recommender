@@ -4,10 +4,11 @@ NOTE: Ignore everything in the models directory as it is out of date.
 
 ## Steps to get the models
 
-* First scrape all the raw data run the scrape_itunes.py file. This will give us everything we need to do this. It can
-take a while to run (can also just download from [here](https://www.dropbox.com/s/17sj74s543h1e6g/all_pod_episodes.csv?dl=0) and place it in the root directory of the project). 
+* As of right now you can scrape the all the data by running the scrape_npr.py file. It shouldn't take too long to run.
 
-* Once you have that data you can run the process_data.py file in the models directory to transform the raw data to what we will give the model. I recommend looking at the file to see what I did and offer suggestions (you should probably familiarize yourself with the data as well). This should take about 15 minutes to run.
+* TODO: Get more data
+
+* TODO: Process/Clean Data
 
 * TODO: Create the model
 
