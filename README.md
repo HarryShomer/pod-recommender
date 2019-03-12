@@ -1,5 +1,7 @@
 # Podcast Episode Recommendation Engine
 
+NOTE: Ignore everything in the models directory as it is out of date.
+
 ## Steps to get the models
 
 * First scrape all the raw data run the scrape_itunes.py file. This will give us everything we need to do this. It can

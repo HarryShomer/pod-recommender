@@ -144,16 +144,11 @@ def create_model_data():
     pod_lemmas = {'episode_name': [], 'pod_name': [], 'episode_description_tokens': [], 'episode_name_tokens': [],
                   'pod_name_tokens': [], 'pod_description_tokens': []}
 
-    i = 1
     for row in pod_dict:
         pod_lemmas['episode_name'].append(row['episode_name'])
         pod_lemmas['pod_name'].append(row['pod_name'])
         for col in ['episode_name', 'episode_description', 'pod_description', 'pod_name']:
             pod_lemmas["_".join([col, "tokens"])].append(process_doc(row[col]))
-
-        if i % 1000 == 0:
-            print(i / 1000)
-        i += 1
 
     with open("model_data.json", "w+") as file:
         json.dump(pod_lemmas, file)

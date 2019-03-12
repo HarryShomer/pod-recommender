@@ -3,6 +3,9 @@
 tests.py
 *.json
 podcast_docs/
+npr/
+scrape_itunes.py
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
