@@ -52,7 +52,7 @@ def parse_podcasts_episodes():
     """
     Scrape the transcript for all the podcasts where it exists
     """
-    main_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "npr")
+    main_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "podcast_data", "npr")
 
     for pod in PODCASTS:
         # Get saved file of all episodes
@@ -97,7 +97,7 @@ def get_all_podcasts():
     :return None
     """
     # Create main dir if needed
-    main_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "npr")
+    main_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "podcast_data", "npr")
     if not os.path.isdir(main_dir):
         os.mkdir(main_dir)
 

@@ -1,0 +1,329 @@
+Ira Glass
+Previously, on Serial...
+
+     Detective
+     Did anyone else use the phone?
+
+     Jay
+     Yeah, um, Adnan, I remember he was talking to a girl, he put me on the phone with her for three minutes. I said hello to her.
+
+     Dave
+     I remember he had told my daughter he had seen the body of a girl in the back of some-- in the trunk of some vehicle.
+
+     Laura
+     I think the guy’s name was maybe Adnan?
+
+Automated voice
+This is a Global-Tel link prepaid call from Adnan Syed an inmate at a Maryland Correctional facility…
+
+Sarah Koenig
+From This American Life and WBEZ Chicago it’s Serial. One story told week by week. I’m Sarah Koenig.
+
+I heard about this other case, of a kid named Justin Wolfe. Actually Adnan mentioned the case to me, kind of in passing. I can’t remember how he heard about it. He reads a lot of different stuff in prison. Anyway, we had been talking about the cell records, and how they were used in Adnan’s case, and Adnan said that in this other case of Justin Wolfe, cell records had also been used against him, but then Justin Wolfe’s conviction was overturned, in part because of the cell records.
+
+So, I looked up this case of Justin Wolfe, just to see, and on paper, I have to say it’s sort of uncanny how many similarities there are with Adnan’s case. All young people, first of all. Justin Wolfe was a suburban kid, eighteen, football player. People thought of him as a good kid though he was selling pot and hanging around some tougher types. This next part is different obviously. He was convicted in the 2001 murder of a drug dealer who was shot nine times. Justin Wolfe was not the shooter. The shooter was the slightly older friend of Wolfe’s named Owen Barber who got a deal in exchange for testifying against Justin Wolfe. Owen Barber told the cops Justin Wolfe had hired him to kill the drug dealer. Wolfe was sentenced to death in Virginia. Wolfe’s trial attorney later gave up his law license, after the bar had initiated disciplinary charges against him for, and this is the technical term, being a crappy lawyer. Oh and there was a witness who was never heard from. Other than that, totally different cases.
+
+Anyhow, eventually Owen Barber recanted. He said Justin Wolfe had nothing to do with the murder, he’d only implicated Wolfe to avoid a death sentence for himself. So I read all about this and thought, “let me talk to the lawyer who helped figure out the flaws in the State’s case against Justin Wolfe. Maybe she has some tips about how we should be looking at the cell records differently, in Adnan’s case.” I looked her up, her name is Deirdre Enright, and she works at the University of Virginia School of Law. She runs their Innocence Project clinic there. They do what Innocence Projects do, they reinvestigate old cases to see if someone’s been wrongfully convicted.
+
+I called her and asked how she dealt with the cell records in the Justin Wolfe case and she was kinda so-so on that topic. She gave me a couple of names to try. No great insights though. But man on every other topic, I found her so helpful. She started asking me about Adnan’s case and I ended up sending her a summary I had made of the detective’s reports, and then the next time we talked, I asked if she’d mind going to a studio.
+
+     Deirdre Enright
+     Hey, you know I read your synopsis of your-- just to jump right in here to your case. I have a million questions for you. But, it’s very, very thin.
+
+     Sarah Koenig
+     Oh the State’s case.
+
+     Deirdre Enright
+     Yeah. After I started reading all this-- all what you had, I started thinking, so everybody here is in high school, right? And why is Don-- doesn’t appear to be of interest to anyone.
+
+Sarah Koenig
+Don was Hae’s new boyfriend. The police considered his alibi iron-clad, he was working at LensCrafters all day. But, see, this is how it is with Deirdre. A conversation with her never seems to begin exactly. It’s already there, on going, her thoughts churning, and you just kinda join in when you’re ready and hope that you can keep up. She is not a small talker or a beater around of bushes. You discuss whatever it is you came to discuss full-on, looking it squarely in the face. She has no time for bullshit. Not because she’s above it or anything but because she actually has no time. She’s one of the busiest and most curious people I’ve ever met.
+
+     Deirdre Enright
+     You know when you first talked to me about this case, the first thing I thought is: “okay, do we have a jailhouse informant? Do we have a person who got way too sweet of a deal?” When I read through your summary of your police notes, I just kept going back to motive and thinking “that’s a big black hole” for me. I still don’t understand why you want this girl dead. Because she broke up with you? People break up with people all the time. I’m a little concerned about racial profiling here, you know?
+
+     Sarah Koenig
+     Oh really? On the part of Adnan. In other words that he’s a Pakistani muslim and--
+
+     Deirdre Enright
+     Right. And people are saying his dark side, and his-- there was some notation about he was very controlling. I thought, “I wonder if he was really very controlling.” So there’s that. The cell phone thing for us and Justin Wolfe is that they used the cell phone records to say they cabin out the period of time when the shooter is driving to the place where the victim is and shooting him and then coming back. So they put those up on a board in the courtroom and say “look at this. He calls him right before he commits the murder, and he calls him right after he commits the murder.” Then you get everybody’s phone records, right? All these kids that are buying pot, smoking pot, selling pot, and everybody’s calling each other all the time. So then you stop and stand back and say: “Well, so what are they trying to say? That Justin Wolfe and these kids, these upper-middle class kids are so stupid that they get in the car and call and say: ‘Okay! I’m on my way to murder him. Okay! I just murdered him! I’m coming back now.’” You know what I mean? Who does that? Now, all these witnesses are saying: “Oh no, we were just all calling each other to buy pot.” Those calls that are infused with meaning by the prosecution’s theory have no meaning in space.
+
+     Sarah Koenig
+     Yeah. I mean it’s funny, do you get cases-- because in Adnan’s case, I feel like from what I can tell, there’s not gross negligence or malfeasance or something on the part of the detectives or the State Attorney’s office, everyone seems to be doing their job, responsibly. It just doesn’t seem like there’s an obvious “oh they never looked at the new boyfriend,” or “oh they never questioned the guy who found the body--” it seems like-- and Adnan himself is not supplying anything super useful to say “here’s why I can prove I didn’t do this.” He has said out front “I can’t give you some clinching piece of information or evidence that’s going to solve this, I wish I could but I can’t. I just don’t have it. like I don’t know how to prove this.”
+
+     Deirdre Enright
+     That’s kinda-- I love hearing that because somewhere along the line I’ve started realizing that when you have an innocent client, they are the least helpful people in the whole world, because they don’t know. They don’t-- they have no idea, like as soon as I realize I have an innocent client and that’s the situation, I think like, “okay well I’ll talk to you again when I’ve solved it, because I’m not gonna need you here.”
+
+     Sarah Koenig
+     --because what’s happening with Adnan is where I’ll find something out that looks kinda bad for him, and I’ll come to him with it and be like, “why-- it does seem like you maybe made this phone call in the middle of the afternoon at a time when you’re saying you were at track, but the phone number is to someone who only you knew, and Jay didn’t know.” So there’s this phone call with this girl Nisha and it’s this glaring thing to me in the middle of the phone record where I’m like, “that’s the one that kinda looks bad for you. Explain that to me. How do you explain that call to me.” His answer is so kinda mealy or not so satisfying where he’s just like, “I don’t-- I can’t explain it, like maybe it was a butt dial and like a machine picked up,” and I’m like “but she’s testifying there’s no machine on it, and he’s just like “I don’t know, I don’t know what to tell you, but like I didn’t-- I didn’t have the phone, I was at track.” I just want to be like “No! Explain it! You should have an answer!”
+
+     Deirdre Enright
+     --and they can’t!
+
+     Sarah Koenig
+     That’s not surprising to you?
+
+     Deirdre Enright
+     Not at all. There was a case that I had, the federal capital murder case, right, where I had my client, Darrell Rice was charged with killing two women hikers in the Shenandoah National Park and blah, blah, blah. They filed a motion saying the motive in this case was hatred, he hated lesbians. That’s why he murdered these two women. So Darrell Rice was easy for me-- not in the beginning because his answers weren’t self-serving and helpful the way you’d think. He’s had time to think about this. Why doesn’t he have a better answer than that? Then I started to realize because he hasn’t been thinking about this, because he didn’t murder anybody. So, I remember one day I had in there maps, to show him where the crime scene was versus where the lodge was versus where mile marker 42 point-- so I put this all out on a table and get my reading glasses and then I said so “when you would camp there, can you show me where you were?” and then he’s like “okay, well I didn’t camp there, I would ride bikes there,” and of course I’m like “okay, well whatever, that-- you know, who cares, whatever. You’ve been in the park before,” then finally I said, “but in relation to the crime scene,” and then he looked at me and it was so simple, he said, “Well, I don’t know where the crime scene was, so can you show me that?” And I remembered thinking, “of course, I’m like everybody else.” I think he knows where the crime scene is.
+
+     Sarah Koenig
+     How many-- do you only take on cases where it’s super clear to everyone involved on your side of the bar, or the bench rather, that this person is innocent or wrongfully convicted? Or do you take cases where you really don’t know when you start down a road and three-quarters of your cases turn out like “yeah he probably did it so lets not take on that one”? Or are you only working with cases where you’re pretty sure from the get-go that the person is--
+
+     Deirdre Enright
+     We don’t know at the get-go because we’re the people that decide whether it’s gonna be-- it’s gonna go or not.
+
+     Sarah Koenig
+     Okay.
+
+     Deirdre Enright
+     So, it goes every different way, right? Sometimes we start down the road and very quickly we talk to four witnesses, all of whom say “no, it was absolutely him,” they have no reason to lie. We quickly realize, okay, we’re being had here. We are in the weeds about a lot of things for a long time until we figured it out. So like today we had team meetings for our four clinic cases, and those are four cases, two of whom we are sure already, two of whom we’re just trying to figure it out. But your guy went to a jury, which-- that’s relatively unusual and I’m assuming he went to a jury because he was saying “I didn’t do this.”
+
+     Sarah Koenig
+     Right.
+
+     Deirdre Enright
+     Right? And so sometimes people say, “I did some of this but I didn’t do all of this, so I’m going to trial,” but he wasn’t saying that.
+
+     Sarah Koenig
+     Yeah, he’s always said the same thing, which is, like, “I had nothing to do with this.”
+
+     Deirdre Enright
+     Right, which-- I don’t know, a lot of lawyers say “oh, they’re all guilty, they’re all guilty.” I generally feel like, especially for most of my career, I was dealing with people-- I wasn’t a director at an innocence project-- and I had a very clear sense of which of my clients did what, and that’s because they told me. So I put some stock in people saying “I didn’t do it” and staying with that.
+
+     Sarah Koenig
+     You do.
+
+     Deirdre Enright
+     Mm-hm yeah. Now, I know some people would say I’m naive, but I also think I’ve been doing this work for a really long time, I don’t think ‘naive’ is a good word for me, you know what I mean?
+
+     Sarah Koenig
+     So, I feel like I’m having this experience where I’ll read something or I’ll do an interview and I’m like “ok, yeah, there’s no way he did it, it just doesn’t add up, it doesn’t add up” and then the very next day I’m like “oh my God, oh my God--”
+
+     Deirdre Enright
+     Look at the phone call to Nisha.
+
+     Sarah Koenig
+     Well, yes, yes. Or like, “oh, this friend said that he behaved this way during the relationship, but this other girl I just talked to last night was like ‘no, he was really overbearing and possessive’” and I’m like “wait, oh my God, maybe he did,” you know? Do you have that? Does that still happen to you or do you just--?
+
+     Deirdre Enright
+     Oh, I now actually teach that. I tell people all the time, you are juggling, and everything’s in the air, and you’re frozen. You have to stay there until you’ve eliminated all questions. Because if you come down or catch one and get attached to it, you’re gonna make the same mistakes that law enforcement do. I think, too, when you keep going, what happens to me is that I reach a tipping point where I have answered questions to my satisfaction and I have answers for everything and my answers are better than law enforcement’s answers. So when I read what you’ve given me, I just think “you guys just don’t have it. You just didn’t--” Nobody’s really doing anything bad, people are trying to run down their leads and talk to people, but they don’t have enough to go forward but they do anyhow, right? So you’ve got bad feelings and you’ve got Jay changing his story. I look at this as, this is just a case that wasn’t ready to be brought. You don’t have enough to put Adnan away. Not to me, you don’t.
+
+     Sarah Koenig
+     Yeah but doesn’t the fact that they did put him away mean that they had enough to put him away?
+
+     Deirdre Enright
+     Well, yeah. They would say yes, and I would say no. The reason I say that is because I look at this and think, law enforcement and prosecutors and defense attorneys, we all-- we act like if a jury will convict, then that’s fine. I think those of us that know a good case from a bad case should know that even if we can a jury to convict, it doesn’t mean we necessarily should ask them to do that.
+
+     Sarah Koenig
+     Does it not happen to you anymore, where you’re like one day you think, “oh he did it,” and the next day you think, “no he--”?
+
+     Deirdre Enright
+     Oh yeah, no for the first however many months thinking “oh yeah, of course it’s him. Oh no it’s not him.” But, in order to revisit it in any kind of careful way, you have to revisit everything. The good and the bad and whatever, and look at it with, an eyebrow up. Sometimes it’s going to stay exactly the way it is and it’s unsatisfying.
+
+     Sarah Koenig
+     That’s my fear. That I’m going to get through all this and be like, “I don’t know.”
+
+     Deirdre Enright
+     Yeah, and you might, and I can’t pretend that that-- I just thought of something that I think we should do unless you don’t want to do it, and you can just think about this.
+
+     Sarah Koenig
+     Okay.
+
+     Deirdre Enright
+     So, just today one of my teams, and it’s one of my better teams because it’s a kid who, a law student who has summered at the FBI and is going to work for the US Attorney. So, he doesn’t have my tree-hugger, everyone’s innocent instincts. But he’s a really hard worker and he has a team and we just closed their case. He came to me tonight and said, ‘are you going to find me a another good case?’ And I said, ‘yeah let me flip through tonight and see what we got.’ I’m sitting here thinking, ‘wait, I should assign them-’
+
+     Sarah Koenig
+     Oh. Oh my god.
+
+     Deirdre Enright
+     Right?
+
+     Sarah Koenig
+     That’s really, um-
+
+     Deirdre Enright
+     Well, I literally, I just thought of it when I was sitting here, thinking it’s a lot of legwork, if we had a team of five students, we could get those things done with people that are being supervised. So think about that. I’m totally hooked.
+
+Sarah Koenig
+I did think about it. I said ‘yes, go ahead.’ Not that I would work with her, my job, unlike theirs is not to figure out if or how I can exonerate Adnan. But sure, if they wanted to take a look at the case on their own, of course I’d welcome that. Many more sets of eyes, some fresh, some jaded, could only be helpful, it seemed to me. I went down to Charlottesville to see how they were getting along. Here is the sound of a law clinic getting ready to consider a new case.
+
+(office noise)
+That’s a scanner, scanning it’s little scanner heart out. It’s manned by anyone Deirdre can grab, her students mostly, a couple of her kids come by the office, she gets one of her daughters scanning.
+
+     Sarah Koenig
+     You said the scanner smells good?
+
+     Deirdre Enright’s Daughter
+     Yeah. (Laughs) Smells like laundry and ink.
+
+     Deirdre Enright
+     And I don’t know how she knows what laundry smells like.
+
+Sarah Koenig
+That’s Deirdre.
+
+     Deirdre Enright
+     So now what we do, usually, when we get our cases, is we collect what mom has, what the inmate has, what is in the court file, what-- paper everywhere. That’s we do is collect all the paper and then do exactly what they’re doing. Then, put the team in and say, take a weekend and read it all.
+
+Sarah Koenig
+Post-conviction work often involves going back and looking at physical evidence in a case. Some innocence projects only work with cases that have DNA evidence, for instance. Deirdre’s group isn’t one of those, but still, she’ll definitely take it if she can get it. At one point Deirdre reads a print-out of an e-mail regarding evidence in Adnan’s case.
+
+     Deirdre Enright
+So this is an e-mail, in 2008, from the Baltimore Police, saying that he believes items from this case have been destroyed, but he doesn’t have a document saying that that is true. So he can’t be 100% sure. And he is the evidence control unit person. So, yeah, that’s not good. I think there’s two things to think about, there’s a statute usually in every state about evidence retention and you can’t destroy evidence until a case is over and done with, doesn’t mean they always honor it. The other thing I’m thinking about is, I can’t tell you the number of cases where somebody says, “I think it’s gone.” And then you go, and you be annoying and you poke around and say, “can I come back there and look?” And they say, “oh okay, we’ll look.” Then somebody goes, “oh, here it is.” So, it’s not fatal. Do you see how I refuse to accept anything?
+
+Sarah Koenig
+It’s true, I can’t think of anyone more optimistic than Deirdre. Which, I don’t know I would have guessed that after doing this kind of work for decades and knowing how rare it is to reverse a conviction, you’d naturally settle in as a pessimist. But maybe the opposite is true: that because your chances are so low, you have to look on the bright side in order to do this work at all. Otherwise, you couldn’t function.
+
+Once Deirdre and her students digest this massive amount of paper, the next step is decide what they’ve got on their hands. First thing they do, says Deirdre, is to give Adnan back the presumption of innocence. It’s kind of a profound thing when you think about it. It’s supposed to happen the first time around, at trial. But it seems like no one in the profession really believes that it does. Because you can’t help it, as a juror you figure the guy sitting behind the defense table must have done something wrong.
+
+So, Deirdre’s team starts with the premise that he didn’t do it, and then they see where that road takes them. If where they end up is that they think maybe Adnan really is innocent, then they have to figure out if there is any way they can prove that in court. The answer to that could definitely be no.
+
+     Deirdre Enright
+     Because the evidence is gone, the people won’t change their minds, there’s no legal remedy. It’s just, those things are just, after time, those things are usually harder to get to.
+
+Sarah Koenig
+As a legal question, Deirdre says they should only have to prove Adnan isn’t their guy, he’s not the killer. But as a practical matter, she said, their chances are much better if they can go a step further, and say to the State, “not only is this not your guy, we can tell you who is your guy.”
+
+     Deirdre Enright
+     The truth is, when you can give the answer of who it is, it makes it a whole lot easier on everybody else to walk away and do this thing that no one ever wants to do. Usually, there is some logical explanation, right? There is a guy, there is a serial killer, there is somebody who is motivated, there is somebody who hated Hae. Usually there’s something. So, you don’t have to, but I always tell people, you have to.
+
+Sarah Koenig
+Of course, after looking everything over, Deirdre and her team might well decide that maybe Adnan is guilty. In which case, they would quietly pack up the files and just keep their mouths shut.
+
+     Sarah Koenig
+     But what I’m saying is that that could happen here, in Adnan’s case. You could look at it and say “eh looks like he did it.”
+
+     Deirdre Enright
+     Hmm.
+
+     Sarah Koenig
+     Say it to me, I mean, not to the world.
+
+     Deirdre Enright
+     Right, I would say it to you. I would say it to Adnan, but I wouldn’t say it to anyone else. I’ll let you do that. (Laughs.)
+
+     Sarah Koenig
+     Four weeks later, I checked back in with Deirdra and two of her students, Katie Clifford and Mario Peia. They’d read through all the files.
+
+     Sarah Koenig
+     Do you guys, do any of you guys, think Adnan’s guilty?
+
+     Deirdre Enright
+     No.
+
+     Katie Clifford
+     No.
+
+     Deirdre Enright
+     I wouldn’t be able to find him guilty with this.
+
+     Mario Peia
+     No, this is one of the things that was very odd when I first started reading this case was how precisely he was convicted under this amount of material. But, no, I do not see him as being guilty at this point.
+
+     Deirdre Enright
+     I would just, at this point, knowing what I know, I would say, I guess I’d have to put him in the person of interest category because he was an old boyfriend. But, even that, I would think, I see no evidence that he was mad.
+
+     Katie Clifford
+     Mountains of reasonable doubt.
+
+     Deirdre Enright
+     Yeah.
+
+Sarah Koenig
+This surprised me. Somehow I thought at least one or two of them would end up on the fence. But, they all sounded so forthright. They said the big things that troubled them were the same things that troubled me: Namely, Jay’s shifting statements to police and how the cell tower information didn’t fully match Jay’s narrative. But the other stuff they seized on was stuff I hadn’t paid much attention to at all: the forensic reports, or rather, the relative lack of forensic reports. This is Katie:
+
+     Katie Clifford
+     Because in our files, we have a lot of things, evidence they collected that got sent off and we don’t have reports for everything and we are curious about the results that we don’t have and whether or not those exist and just why they’re not in the files that we have.
+
+Sarah Koenig
+The liquor bottle, for one.
+
+That bottle of Coronet VSQ Brandy that was found right near Hae’s body. A lab report says they recovered nucleated epithelial cells from the mouth of the bottle and from the cap. But that’s all. It just says, “retained for future possible analysis.” But the future never came. They never tested those cells for DNA.
+
+Then, Mario didn’t like the report on the fibers. Two fibers, one, reddish, that was found near Hae’s head and one that I think was fluorescent blue, it’s a little hard to tell from the report, that was found underneath her, in the soil. Mario didn’t think they were tested against enough samples. For instance, they weren’t tested against a rope that was also found right near the body.
+
+     Mario Peia
+     I would think that you would be able to compare the fibers to the rope, or compare the fibers to whatever you can get your hands on and I didn’t actually see that ever get tested. The fibers were tested against some things but nothing came back of significance and then the fibers just, the fact of the fibers just kind of went away.
+
+Sarah Koenig
+As for the rope, which, from a photo, looks sorta like a laundry line, it wasn’t tested at all, for anything. Deirdre says that kind of thing happens a lot, where investigators will say, “oh, that item we collected? It’s not relevant. It’s not connected to what happened, so there’s no point in testing.”
+
+     Deirdre Enright
+     So another case that I had, anything that didn’t match the suspect that they had, they just ignored it, right? They would say, “well that’s outside the crime scene, that’s really not inside the crime scene. So, those beer cans over there, we’re not gonna test there because that’s too far away. We’re going to call that outside the crime scene.” When I talked to DNA experts about that they were saying, “yeah, I mean, if you swab that and you get some skin cells or saliva and it’s just random, you get no hit on anybody, well then it’s neither here nor there.” But, they were saying, “but, if you put it in and you get a hit on a serial killer, right? Or one of two other people that killed Asian women within a year in Baltimore, well now we’ve got enough to charge and convict somebody.” So, what you call relevant and irrelevant you can only do once you have a test result.
+
+Sarah Koenig
+Finally, Deirdre and Katie and Mario were all confused by the swabs that were taken from Hae’s body. The medical examiner had done what’s known as a PERK kit, it stands for Physical Evidence Recovery Kit. It’s a standard procedure in a rape case, but it is also done in some murder cases. There was no evidence Hae was sexually assaulted, but they did the swabs just the same. The medical examiner’s report says they came back, “negative for spermatozoa.” But that’s about it which seemed very thin to Deirdre, these swabs weren’t examined more thoroughly, that they were never tested for DNA.
+
+     Deirdre Enright
+     --which is just weird. That’s just, that seems very strange to me in a case like this.
+
+     Sarah Koenig
+     That seems very strange to you.
+
+     Deirdre Enright
+     Mm-hm. You almost always submit that for DNA testing. That’s what we’re not seeing, is a lab report that says, if it came back, and that the other, being loosey-goosey about whether it’s not Jay, not Adnan, you know, that’s strange.
+
+     Sarah Koenig
+     So is that something that you guys would want to get tested, that stuff?
+
+     Deirdre Enright
+     Absolutely.
+
+     Mario Peia
+     Yes. Deidre, you can correct me if I’m wrong, but this certainly seems to be quite a bit to get started.
+
+     Sarah Koenig
+     Do you have any metric of how hopeful/hopeless this one looks at this point in terms of finding out something useful and usable?
+
+     Deirdre Enright
+Mario is shaking his head. That’s because he’s a pro-government      right-wing Republican operative. (Laughing)
+
+     Mario Peia
+     Easy, here.
+
+     Deirdre Enright
+     I’m teasing. Please don’t put that on the radio.
+
+Sarah Koenig
+I checked with Mario, he said it was fine.
+
+     Deirdre Enright
+     You know, it’s always an outside shot, always.
+
+     Sarah Koenig
+     But there’s enough here, I guess what I’m saying is, there’s enough here that you think it’s worth asking these questions. You know what I mean, do you guys independently think feel like something went wrong here? Or is this just like “well, we’re sort of humoring you, the reporter.”
+
+     Deirdre Enright
+     No, I would look at this-- I would have a team on this case saying keep going.
+
+     Sarah Koenig
+     I see.
+
+Sarah Koenig
+They all seemed so hopeful, so sure that with enough digging they were going to shake something loose. But, I was more skeptical. I mean, I felt like I had been in that same mindset for so many months and I hadn’t found anything that absolutely tipped the scale in Adnan’s favor. Anyhow, Deirdre noticed.
+
+     Deirdre Enright
+     Sarah, you sound really down on Adnan today.
+
+     Sarah Koenig
+     I don’t know.
+
+     Deirdre Enright
+     Yeah, you’re --
+
+     Sarah Koenig
+     I go up and down, I go up and down! Sometimes I am totally with him and then other times I am like, “I don’t know dude, this doesn’t, why can’t you remember anything? Why does nothing, I don’t know and that I just go back to why can’t you account for this day, of all days. You knew it was an important day, you got a call from a cop that day, asking where your ex-girlfriend was. Surely, you must have gone over it, before six weeks had passed, surely.” You know?
+
+     Deirdre Enright
+     I don’t have that reaction but, I see what you’re saying.
+
+     Sarah Koenig
+     Yeah...and then I am just aware of, “what if he is this amazing sociopath?” and I’m just being played, you know? I don’t get that sense, but he’s really charming. He’s really smart. He’s really. He’s funny and he could totally be a sociopath.
+
+     Deirdre Enright
+     But see, here’s where I go with that, in my twenty-six years of doing this, I pray for a sociopath, because I never get those guys. I get the innocent ones and I get these dumb “so me and my friends smoked crack for three days and drank five bottles of whatever and then we got a plan.” That’s who I get. All. The. Time. So, I think the odds of you getting the charming sociopath, you’re just not that lucky. Very few times have I had a client-- and the ones who really did it and they have serious mental issues and they’re not sociopathy, they’re schizophrenia or florid psychosis, because of a whatever. I just think that the odds of him being that and no one having detected any signs of it until he kills his girlfriend who he’s moved on from, so--
+
+Sarah Koenig
+Deirdre and her gang, they’ve got to stick with stuff they can bring to a court, forensics mostly. They’re on the lookout for another explanation entirely. Maybe Adnan had nothing to do with this at all, maybe it was a serial killer. Maybe there’s a clue from another Baltimore cold case. They’re like explorers, headed for a bold new world. Me? I’m gonna stay right here at home with my little garden spade and keep scraping at the thing that confuses me most, Jay.
+
+Next time, on Serial.
