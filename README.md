@@ -1,12 +1,10 @@
 # Podcast Episode Recommendation Engine
 
-NOTE: Ignore the create_models.py file for now as it's out of date.
-
 ## Steps to get the models
 
 * As of right now you can scrape the all the data by running the scrape_npr.py file. It shouldn't take too long to run.
 
-* TODO: Finish processing/cleaning Data
+* To clean and create the model (still in progress) - run the create_models.py file. 
 
 * TODO: Create the model
 
