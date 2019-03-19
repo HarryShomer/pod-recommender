@@ -1,4 +1,3 @@
-import pandas as pd
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 import requests
@@ -24,7 +23,6 @@ PODCASTS =[
         "https://www.npr.org/podcasts/510312/codeswitch",
         "https://www.npr.org/podcasts/510289/planet-money",
 ]
-
 
 
 def get_transcript(url):

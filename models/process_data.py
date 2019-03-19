@@ -5,38 +5,70 @@ import string
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
-import pandas as pd
-import json
 import os
-
-pd.options.mode.chained_assignment = None
+import re
 
 # Saves time to just do it once
 punctuation_table = str.maketrans({key: None for key in string.punctuation})
 STOP_WORDS = set(stopwords.words('english'))
 
 
-# TODO: What should we look for?
-def clean_data():
+# TODO: What else should we look for?
+def clean_data(text, pod):
     """
-    :return: 
-    """
-    pass
-
-
-def process_doc(text):
-    """
-    Process a given string of text:
-    1. Split into individual words
-    2. Convert to lowercase
-    3. Get rid of stop words
-    4. No punctuation
-    5. Lemmatize
+    Clean the data for analysis. Get rid of unnecessary stuff
     
     :param text: String of text
+    :param pod: Specific podcast
+    
+    :return: cleaned text
+    """
+    text = text.lower()
+
+    # Various names of hosts for podcasts obtained from websites
+    hosts = {
+        "planet-money": "Ailsa Chang Cardiff Garcia Jacob Goldstein Noel King Kenny Malone Robert Smith Stacey Vanek Smith",
+        "the-indicator-from-planet-money": "Ailsa Chang Cardiff Garcia Jacob Goldstein Noel King Kenny Malone Robert Smith Stacey Vanek Smith",
+        "hidden-brain": "Shankar Vedantam",
+        "npr-politics-podcast": "",
+        "invisibilia": "Alix Spiegel Hanna Rosin Lulu Miller",
+        "embedded": "Kelly McEvers",
+        "codeswitch": "Shereen Marisol Meraji Gene Demby Adrian Florido Karen Grigsby Bates Leah Donnella "
+                      "Maria Paz Gutierrez Tiara Jenkins Kat Chow",
+        "wow-in-the-world": "Guy Raz Mindy Thomas",
+    }
+
+    # 1. \(.+?(?=\))\) = Match everything in parentheses
+    # 2. \[.+?(?=\])\] = Match everything in brackets
+    # 3. HOST = The words 'host' shows up here and there
+    # 4. \w+: = Always a name when like this
+    patterns = [r"\(.+?(?=\))\)", r"\[.+?(?=\])\]", r"host", r"\s+\w+:"]
+    for pattern in patterns:
+        text = re.sub(pattern, " ", text)
+
+    # Remove host names from appropriate podcasts
+    for host in hosts.get(pod, "").split():
+        text = text.replace(host.lower(), " ")
+
+    return text
+
+
+def process_doc(text, pod):
+    """
+    Process a given string of text:
+    1. "Clean" text -> Get rid of unnecessary words 
+    2. Split into individual words
+    3. Convert to lowercase
+    4. Get rid of stop words
+    5. No punctuation
+    6. Lemmatize
+    
+    :param text: String of text
+    :param pod: Specific podcast
     
     :return: List of lemmatized words
     """
+    text = clean_data(text, pod)
     tokens = word_tokenize(text)
 
     # Get rid of Stop words and punctuation
@@ -54,14 +86,14 @@ def process_doc(text):
 
 def create_model_data():
     """
-    Create the data for the analysis and deposit in a json file
+    Create the data for the analysis 
     
-    :return: None
+    :return: Dict of data
     """
     main_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "podcast_data")
-    pods = {}
+    pods = {"transcripts": [], "pods": [], "episodes": []}
 
-    print("Processing the transcripts", end="", flush=True)
+    print("Processing the episode transcripts", end="", flush=True)
 
     # Get all the podcasts
     for pod_type in ['assorted', 'npr']:
@@ -74,13 +106,17 @@ def create_model_data():
                 for episode in os.listdir(os.path.join(main_dir, pod_type, item)):
                     with open(os.path.join(main_dir, pod_type, item, episode), 'r', 
                               encoding='utf-8', errors='ignore') as file:
-                        pods[item][episode[:episode.rfind(".")]] = process_doc(file.read())
-
+                        pods['transcripts'].append(process_doc(file.read(), item))
+                        pods['pods'].append(item)
+                        pods["episodes"].append(episode[:episode.rfind(".")])
     print(" Done")
+
+    return pods
 
 
 def main():
     create_model_data()
+    #pass
 
 if __name__ == "__main__":
     main()
