@@ -77,9 +77,7 @@ def process_doc(text, pod):
 
     wordnet_lemmatizer = WordNetLemmatizer()
     words_lemma = [wordnet_lemmatizer.lemmatize(word) for word in filtered_words]
-
-    # Get rid of weird chars and encoding stuff
-    #words_lemma = [word.encode("ascii", "ignore").decode("utf-8") for word in words_lemma]
+    words_lemma = [word for word in words_lemma if word not in ["”", "’", "–", "eg", "“", '', " "]]
 
     return words_lemma
 
@@ -91,7 +89,7 @@ def create_model_data():
     :return: Dict of data
     """
     main_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "podcast_data")
-    pods = {"transcripts": [], "pods": [], "episodes": []}
+    pods = []
 
     print("Processing the episode transcripts", end="", flush=True)
 
@@ -100,15 +98,15 @@ def create_model_data():
         for item in os.listdir(os.path.join(main_dir, pod_type)):
             if os.path.isdir(os.path.join(main_dir, pod_type, item)):
                 print(".", end="", flush=True)
-                pods[item] = {}
 
                 # Now get all epsiodes for the podcast
                 for episode in os.listdir(os.path.join(main_dir, pod_type, item)):
-                    with open(os.path.join(main_dir, pod_type, item, episode), 'r', 
-                              encoding='utf-8', errors='ignore') as file:
-                        pods['transcripts'].append(process_doc(file.read(), item))
-                        pods['pods'].append(item)
-                        pods["episodes"].append(episode[:episode.rfind(".")])
+                    with open(os.path.join(main_dir, pod_type, item, episode), 'r', encoding='utf-8', errors='ignore') as file:
+                        pods.append({
+                            "podcast": item,
+                            "episode": episode[:episode.rfind(".")],
+                            "transcript": process_doc(file.read(), item)
+                        })
     print(" Done")
 
     return pods
@@ -116,7 +114,6 @@ def create_model_data():
 
 def main():
     create_model_data()
-    #pass
 
 if __name__ == "__main__":
     main()

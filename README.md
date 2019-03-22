@@ -4,7 +4,7 @@
 
 * As of right now you can scrape the all the data by running the scrape_npr.py file. It shouldn't take too long to run.
 
-* To clean and create the model (still in progress) - run the create_models.py file. 
+* To clean and create the model (still in progress) - run the create_models.py file.
 
 * TODO: Create the model
 

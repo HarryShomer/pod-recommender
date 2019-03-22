@@ -1,10 +1,10 @@
 .idea/
 .csv/
 tests.py
-*.json
-podcast_docs/
 npr/
 scrape_itunes.py
+lda/
+lsi/
 
 
 # Byte-compiled / optimized / DLL files
