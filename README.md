@@ -2,11 +2,12 @@
 
 ## Steps to get the models
 
-* As of right now you can scrape the all the data by running the scrape_npr.py file. It shouldn't take too long to run.
+* To scrape all the data, run the `scrape_all.py` file in the scraper directory. This will scrape all the npr podcasts
+and the This American Life podcast. It should take a little while to run.
 
-* To clean and create the model (still in progress) - run the create_models.py file.
-
-* TODO: Create the model
+* To clean and create the model (still in progress) run the `create_models.py` file in the models directory. This will
+create and store all the models, store the results in the results.json file, and create visualizations in the viz
+directory.
 
 ## Requirements:
 

@@ -130,12 +130,3 @@ def get_all_podcasts():
         time.sleep(10)
 
         browser.close()
-
-
-def main():
-    get_all_podcasts()
-    parse_podcasts_episodes()
-
-    
-if __name__ == "__main__":
-    main()

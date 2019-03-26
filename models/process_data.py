@@ -8,6 +8,8 @@ from nltk.corpus import stopwords
 import os
 import re
 
+main_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "podcast_data")
+
 # Saves time to just do it once
 punctuation_table = str.maketrans({key: None for key in string.punctuation})
 STOP_WORDS = set(stopwords.words('english'))
@@ -88,25 +90,23 @@ def create_model_data():
     
     :return: Dict of data
     """
-    main_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "podcast_data")
-    pods = []
-
     print("Processing the episode transcripts", end="", flush=True)
+    pods = []
 
     # Get all the podcasts
     for pod_type in ['assorted', 'npr']:
-        for item in os.listdir(os.path.join(main_dir, pod_type)):
-            if os.path.isdir(os.path.join(main_dir, pod_type, item)):
-                print(".", end="", flush=True)
+            for item in os.listdir(os.path.join(main_dir, pod_type)):
+                if os.path.isdir(os.path.join(main_dir, pod_type, item)):
+                    print(".", end="", flush=True)
 
-                # Now get all epsiodes for the podcast
-                for episode in os.listdir(os.path.join(main_dir, pod_type, item)):
-                    with open(os.path.join(main_dir, pod_type, item, episode), 'r', encoding='utf-8', errors='ignore') as file:
-                        pods.append({
-                            "podcast": item,
-                            "episode": episode[:episode.rfind(".")],
-                            "transcript": process_doc(file.read(), item)
-                        })
+                    # Now get all epsiodes for the podcast
+                    for episode in os.listdir(os.path.join(main_dir, pod_type, item)):
+                        with open(os.path.join(main_dir, pod_type, item, episode), 'r', encoding='utf-8', errors='ignore') as file:
+                            pods.append({
+                                "podcast": item,
+                                "episode": episode[:episode.rfind(".")],
+                                "transcript": process_doc(file.read(), item)
+                            })
     print(" Done")
 
     return pods
