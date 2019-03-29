@@ -256,8 +256,8 @@ def create_viz():
 
 
 def main():
-    #data = process_data.create_model_data()
-    #run_analysis(data)
+    data = process_data.create_model_data()
+    run_analysis(data)
     create_viz()
 
 
