@@ -46,8 +46,8 @@ PODCASTS_CATS = {
 }
 
 # MAX and MIN number of topics we should use to build the models
-MIN_TOPICS = 1
-MAX_TOPICS = 14
+MIN_TOPICS = 3
+MAX_TOPICS = 8
 
 
 def get_tfidf(docs, dictionary):
@@ -115,7 +115,7 @@ def calc_similarity(model_data, corpus, dictionary):
     :param corpus: Test tfidf
     :param dictionary: Mapping of words to #s 
     
-    :return: 
+    :return: None
     """
     print("Calculating the metrics", end="", flush=True)
 
@@ -123,8 +123,9 @@ def calc_similarity(model_data, corpus, dictionary):
     preds = {}
     for metric in ['lda', 'lsi']:
         for i in range(1, 6):
-            preds[f"{metric}_{i}_similarity_correct"] = {}
-            preds[f"{metric}_{i}_similarity_same"] = {}
+            preds[f"{metric}_same_{i}"] = {}
+            if i in [1, 3, 5]:
+                preds[f"{metric}_top_{i}"] = {}
 
     # Test each of the 2 types of model from the # of topics used
     for topics in range(MIN_TOPICS, MAX_TOPICS+1):
@@ -135,17 +136,22 @@ def calc_similarity(model_data, corpus, dictionary):
         lda_index = MatrixSimilarity(lda[corpus], num_best=5, num_features=len(dictionary))
         lsi_index = MatrixSimilarity(lsi[corpus], num_best=5, num_features=len(dictionary))
 
+        # Grade recommendations for each podcast
         for pod, lda_similarities, lsi_similarities in zip(model_data, lda_index[corpus], lsi_index[corpus]):
             episode_sim = {}
             for sim_metric in [["lda", lda_similarities], ["lsi", lsi_similarities]]:
+                accuracies = []
                 for sim in range(len(sim_metric[1])):
-                    base_col = f'{sim_metric[0]}_{sim+1}_similarity'
                     sim_pod = model_data[sim_metric[1][sim][0]]['podcast']
 
                     # Is it "correct"
-                    episode_sim[f'{base_col}_correct'] = PODCASTS_CATS[pod['podcast']] == PODCASTS_CATS[sim_pod]
+                    accuracies.append(PODCASTS_CATS[pod['podcast']] == PODCASTS_CATS[sim_pod])
                     # If same pod
-                    episode_sim[f'{base_col}_same'] = pod['podcast'] == sim_pod
+                    episode_sim[f'{sim_metric[0]}_same_{sim+1}'] = pod['podcast'] == sim_pod
+
+                # Get top 1, 3, 5 accuracies
+                for rec in [1, 3, 5]:
+                    episode_sim[f'{sim_metric[0]}_top_{rec}'] = True if sum(accuracies[:rec]) > 0 else False
 
             results.append(episode_sim)
 
@@ -159,7 +165,7 @@ def calc_similarity(model_data, corpus, dictionary):
     with open("results.json", "w") as file:
         json.dump(preds, file, indent=4)
 
-    print(". Done")
+    print(" Done")
 
 
 def run_analysis(data):
@@ -191,14 +197,10 @@ def run_analysis(data):
 
 def create_viz():
     """
-    This functions creates 3 types visualizations: 
+    This functions creates 2 types visualizations: 
     
-    1. For each possible model (lda/lsi from MIN_TOPICS to MAX_TOPICS) the `accuracy` and `sameness` for each of the 
-       5 recommendations individually. ['lda_correct.png', 'lda_same.png', 'lsi_correct.png', 'lsi_same.png']
-    2. For each possible model (lda/lsi from MIN_TOPICS to MAX_TOPICS) the `accuracy` and `sameness` for the top 5
-       recommendations as a whole. ['top_5.png'].
-    3. I attempted to model how unique the models were by subtracting the accuracy from the sameness. This will give
-       us how often they recommended podcasts that were not belonging to the same podcast. 
+    1. Top N (1, 3, 5) accuracy and `sameness` for the 5 recommendations. 
+    2. The uniqueness of the recommendations which I define as `accuracy% - same%`
     """
     if not os.path.isdir(os.path.join(MAIN_PATH, "viz")):
         os.mkdir(os.path.join(MAIN_PATH, "viz"))
@@ -210,60 +212,52 @@ def create_viz():
     # 1. Create a separate viz for each
     ###################################
     for model_type in ["lda", "lsi"]:
-        for results_type in ['correct', 'same']:
+        for results_type in ['top', 'same']:
+            offset = 2 if results_type == "top" else 1
+            title = "Same" if results_type == "same" else "Accuracy"
+            label = "rec" if results_type == "same" else "top"
+
             plt.figure()
 
-            for col in [f"{model_type}_{i}_similarity_{results_type}" for i in range(1, 6)]:
-                plt.plot(np.arange(MIN_TOPICS, MAX_TOPICS+1), [results[col][i] for i in results[col]], label=col)
+            for col in [f"{model_type}_{results_type}_{i}" for i in range(1, 6, offset)]:
+                plt.plot(np.arange(MIN_TOPICS, MAX_TOPICS+1), [results[col][i] for i in results[col]],
+                         label=f"{label} {col[col.rfind('_')+1:]}")
 
-            plt.title(f"{model_type} {results_type} Accuracy")
+            plt.title(f"{model_type} Top N {title}%")
             plt.xlabel("# of Topics")
-            plt.ylabel("Accuracy")
+            plt.ylabel(title + "%")
             plt.legend(loc="lower left", prop={'size': 8})
             plt.savefig(os.path.join(MAIN_PATH, "viz", f"{model_type}_{results_type}.png"))
 
-    acc_avgs = {}
+    avg_same = {'lda': [], 'lsi': []}
+    for model_type in ['lda', 'lsi']:
+        for topic in range(MIN_TOPICS, MAX_TOPICS+1):
+            same_sum = 0
+            for num in range(1, 6):
+                same_sum += results[f'{model_type}_same_{num}'][str(topic)]
+            avg_same[model_type].append(same_sum / 5)
 
     #######################################
-    # 2. Avg out top 5 and place on one viz
-    #######################################
-    plt.figure()
-    for model_type in ["lda", "lsi"]:
-        for results_type in ['correct', 'same']:
-            acc_avgs[f"{model_type}_{results_type}"] = []
-
-            # Get the cumulative top 5 average for each
-            for topics in range(MIN_TOPICS, MAX_TOPICS+1):
-                model_accs = []
-                for result_num in range(1, 6):
-                    model_accs.append(results[f"{model_type}_{result_num}_similarity_{results_type}"][str(topics)])
-
-                acc_avgs[f"{model_type}_{results_type}"].append(np.mean(model_accs))
-
-            plt.plot(np.arange(MIN_TOPICS, MAX_TOPICS+1), acc_avgs[f"{model_type}_{results_type}"], label=f"{model_type}_{results_type}")
-
-    plt.title("Top 5 Accuracy")
-    plt.xlabel("# of Topics")
-    plt.ylabel("Top 5 Acc%")
-    plt.legend(loc="lower left", prop={'size': 8})
-    plt.savefig(os.path.join(MAIN_PATH, "viz", "Top_5.png"))
-
-    #######################################
-    # 3. Correct% - Same% = Uniqueness
+    # 2. Correct% - Same% = Uniqueness
     #######################################
     plt.figure()
-    plt.plot(np.arange(MIN_TOPICS, MAX_TOPICS+1), np.array(acc_avgs["lda_correct"]) - np.array(acc_avgs["lda_same"]), label="lda")
-    plt.plot(np.arange(MIN_TOPICS, MAX_TOPICS+1), np.array(acc_avgs["lsi_correct"]) - np.array(acc_avgs["lsi_same"]), label="lsi")
-    plt.title("Top 5 Uniqueness")
+    for model_type in ['lda', 'lsi']:
+        for top in ["1", "3", "5"]:
+            col = f"{model_type}_top_{top}"
+            plt.plot(np.arange(MIN_TOPICS, MAX_TOPICS+1),
+                     np.array([results[col][i] for i in results[col]]) - np.array(avg_same[model_type]),
+                     label=f"{model_type}_{top}")
+
+    plt.title("Top N Uniqueness%")
     plt.xlabel("# of Topics")
-    plt.ylabel("Correct% - Same%")
+    plt.ylabel("Accuracy% - Same%")
     plt.legend(loc="lower right")
     plt.savefig(os.path.join(MAIN_PATH, "viz", "Uniqueness.png"))
 
 
 def main():
-    data = process_data.create_model_data()
-    run_analysis(data)
+    #data = process_data.create_model_data()
+    #run_analysis(data)
     create_viz()
 
 
