@@ -6,8 +6,7 @@
 and the This American Life podcast. It should take a little while to run.
 
 * To clean and create the model (still in progress) run the `create_models.py` file in the models directory. This will
-create and store all the models, store the results in the results.json file, and create visualizations in the viz
-directory.
+create and store all the models along with the recommendations produced for each podcast by model.
 
 ## Requirements:
 
