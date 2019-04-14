@@ -4,6 +4,7 @@ Module for processing the data for the model
 import string
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
+from collections import Counter
 from nltk.corpus import stopwords
 import os
 import re
@@ -91,7 +92,7 @@ def create_model_data():
     :return: Dict of data
     """
     print("Processing the episode transcripts", end="", flush=True)
-    pods = []
+    pods, freq = [], []
 
     # Get all the podcasts
     for pod_type in ['assorted', 'npr']:
@@ -107,7 +108,10 @@ def create_model_data():
                                 "episode": episode[:episode.rfind(".")].encode("ascii", "ignore").decode("utf-8"),
                                 "transcript": process_doc(file.read(), item)
                             })
+                            freq.append(item.encode("ascii", "ignore").decode("utf-8"))
     print(" Done")
+
+    print({i: j for i, j in zip(Counter(freq).keys(), Counter(freq).values())})
 
     return pods
 

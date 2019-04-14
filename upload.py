@@ -14,7 +14,7 @@ def fix_unicode(model):
 
 	for i in range(len(results['results'])):
 		results['results'][i]["Podcast"] = fix_string(results['results'][i]["Podcast"])
-		results['results'][i]["Episode"] = fix_string(results['results'][i]["Podcast"])
+		results['results'][i]["Episode"] = fix_string(results['results'][i]["Episode"])
 
 		for j in range(1, 6):
 			if f"Recommendation #{j}" in results['results'][i]:
@@ -28,7 +28,9 @@ def fix_unicode(model):
 ################################################
 ################################################
 ################################################
-
+fix_unicode("lda")
+fix_unicode("lsi")
+"""
 with open(os.path.join(FILE_PATH, "lda_6_results.json"), "r") as f:
 		results = json.load(f)
 
@@ -45,5 +47,6 @@ for rec in results['results']:
 
 df = pd.DataFrame(recs)
 print(df.iloc[0])
+"""
 
 
