@@ -103,8 +103,8 @@ def create_model_data():
                     for episode in os.listdir(os.path.join(main_dir, pod_type, item)):
                         with open(os.path.join(main_dir, pod_type, item, episode), 'r', encoding='utf-8', errors='ignore') as file:
                             pods.append({
-                                "podcast": item,
-                                "episode": episode[:episode.rfind(".")],
+                                "podcast": item.encode("ascii", "ignore").decode("utf-8"),
+                                "episode": episode[:episode.rfind(".")].encode("ascii", "ignore").decode("utf-8"),
                                 "transcript": process_doc(file.read(), item)
                             })
     print(" Done")

@@ -1,19 +1,5 @@
 """
-This module creates a number of different LDA and LSI models. Each model differs in the # of numbers. The range of numbers
-is between the MIN_TOPICS and MAX_TOPICS global variables. 
 
-For each episode we obtained the top 5 recommendations for episodes in the entire dataset. In order to determine how well 
-those recommendations are the following strategy was used: For each podcast you can look up the associated `genre` that 
-it belongs to (it may say on the website or you can check what google or itunes brings up). We can then compare the
-genre for the podcast and the recommendations. The assumption here is that the model should recommend podcasts in the
-same genre. This was done for each podcast and can be found in the PODCAST_CATS global variable. 
-
-That is how we check for `accuracy`. Another consideration was if the recommendation was an episode from the same 
-podcast. Another assumption made is that while it makes sense to recommend episodes from the same podcast, it is an
-easy and boring answer. Therefore we should place more weight for the models that recommend different podcasts. We 
-therefore calculate this as well. From this I calculated a `uniqueness` measure. This is just accuracy - sameness. 
-
-All the graphs with the results can be found in the /models/viz folder. 
 """
 import os
 import json
@@ -301,13 +287,16 @@ def run_analysis(data):
 
     # Map all words in both training and testing set
     dictionary = gensim.corpora.Dictionary([podcast['transcript'] for podcast in data])
+    print("1")
 
     # Get tfidf for training data
     tfidf = get_tfidf([podcast['transcript'] for podcast in data], dictionary)
+    print("2")
 
     # Create all the models
     for topics in range(MIN_TOPICS, MAX_TOPICS+1):
         create_lda_model(tfidf, dictionary, topics)
+        print("3")
         create_lsi_model(tfidf, dictionary, topics)
         print(".", end="", flush=True)
     print(" Done")
