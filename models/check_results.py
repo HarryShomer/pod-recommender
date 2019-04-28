@@ -4,7 +4,6 @@ Check the hand-graded results of the LDA and LSI models. Done on about ~10% of t
 import os
 import json
 import numpy as np
-from collections import Counter
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 
@@ -19,7 +18,7 @@ def check_model_results(model_type):
     
     :return: None
     """
-    with open(os.path.join(MAIN_PATH, f"{model_type.upper()}.json"), "r") as f:
+    with open(os.path.join(MAIN_PATH, "..", f"{model_type.lower()}_results.json"), "r") as f:
         results = json.load(f)['results']
 
     # Only keep results that are graded
@@ -29,8 +28,6 @@ def check_model_results(model_type):
         if 'Recommendation #1' in result and result['Recommendation #1']['isCorrect'] is not None:
             graded_results.append(result)
             pods_graded.append(result['Podcast'])
-
-    print({i: j for i, j in zip(Counter(pods_graded).keys(), Counter(pods_graded).values())})
 
     # Add up recs by rec #
     recs = {f'Recommendation #{i}': [] for i in range(1, 6)}
