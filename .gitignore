@@ -1,5 +1,4 @@
 .idea/
-.csv/
 tests.py
 npr/
 scrape_itunes.py
@@ -110,4 +109,3 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-*.csv

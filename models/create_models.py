@@ -1,5 +1,5 @@
 """
-
+Create different models used for analysis
 """
 import os
 import json
@@ -32,8 +32,8 @@ PODCASTS_CATS = {
 }
 
 # MAX and MIN number of topics we should use to build the models
-MIN_TOPICS = 6
-MAX_TOPICS = 6
+MIN_TOPICS = 5
+MAX_TOPICS = 7
 
 
 def calc_similarity(model_data, corpus, dictionary):
@@ -247,7 +247,7 @@ def create_lda_model(corpus_tfidf, dictionary, topics):
     if not os.path.isdir(path):
         os.mkdir(path)
 
-    lda = gensim.models.LdaMulticore(corpus_tfidf, num_topics=topics, id2word=dictionary, random_state=42)
+    lda = gensim.models.LdaModel(corpus_tfidf, num_topics=topics, id2word=dictionary, random_state=42)
     lda.save(os.path.join(path, f"lda_{topics}.model"))
 
 
@@ -287,17 +287,15 @@ def run_analysis(data):
 
     # Map all words in both training and testing set
     dictionary = gensim.corpora.Dictionary([podcast['transcript'] for podcast in data])
-    print("1")
 
     # Get tfidf for training data
     tfidf = get_tfidf([podcast['transcript'] for podcast in data], dictionary)
-    print("2")
 
     # Create all the models
     for topics in range(MIN_TOPICS, MAX_TOPICS+1):
         create_lda_model(tfidf, dictionary, topics)
-        print("3")
-        create_lsi_model(tfidf, dictionary, topics)
+        if topics == 6:
+            create_lsi_model(tfidf, dictionary, topics)
         print(".", end="", flush=True)
     print(" Done")
 

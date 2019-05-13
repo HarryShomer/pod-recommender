@@ -111,8 +111,6 @@ def create_model_data():
                             freq.append(item.encode("ascii", "ignore").decode("utf-8"))
     print(" Done")
 
-    print({i: j for i, j in zip(Counter(freq).keys(), Counter(freq).values())})
-
     return pods
 
 

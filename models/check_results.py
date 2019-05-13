@@ -10,15 +10,16 @@ plt.style.use('ggplot')
 MAIN_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)))
 
 
-def check_model_results(model_type):
+def check_model_results(model_type, topics):
     """
     Check the graded results of the model
     
     :param model_type: LDA or LSI
+    :param topics: # of topics used for model
     
     :return: None
     """
-    with open(os.path.join(MAIN_PATH, "..", f"{model_type.lower()}_results.json"), "r") as f:
+    with open(os.path.join(MAIN_PATH, "..", "graded_results", f"{model_type.lower()}_{topics}_results.json"), "r") as f:
         results = json.load(f)['results']
 
     # Only keep results that are graded
@@ -38,27 +39,57 @@ def check_model_results(model_type):
     return [sum(recs[f'Recommendation #{i}']) / len(recs[f'Recommendation #{i}']) for i in range(1, 6)]
 
 
-def plot_results():
+def plot_lda_results():
     """
-    Plot Results of both models
+    Plot the results for the 3 LDA models (topic of 5, 6, and 7)
+    """
+    plt.figure()
+
+    index = np.arange(5)
+    bar_width = .3
+    N = 3  # num models
+
+    # Create axis for each
+    lda_models = []
+    for i, topics in zip(range(0, N), [5, 6, 7]):
+        width_offset = bar_width * i
+        lda_models.append(plt.bar(index + width_offset, check_model_results("LDA", topics), bar_width,
+                                  label=f"lda_{topics}"))
+
+    plt.xlabel("Rec #")
+    plt.ylabel("Accuracy")
+    plt.xticks(index + bar_width, index + 1)
+
+    plt.title(f"LDA Model Accuracy")
+    plt.legend(loc="best")
+    plt.tight_layout()
+    plt.savefig(os.path.join(MAIN_PATH, "..", f"lda_results.png"))
+
+
+def plot_initial_results():
+    """
+    Plot Results of both initial models.
+    
+    This is LDA vs. LSI for 6 topics
     """
     plt.figure()
 
     index = np.arange(5)
     width = .3
 
-    plt.bar(index, check_model_results("LSI"), width, label=f"LSI")
-    plt.bar(index + width, check_model_results("LDA"), width, label=f"LDA")
+    plt.bar(index, check_model_results("LSI", 6), width, label=f"LSI")
+    plt.bar(index + width, check_model_results("LDA", 6), width, label=f"LDA")
 
     plt.xlabel("Rec #")
     plt.ylabel("Accuracy")
     plt.xticks(index + width / 2, index+1)
 
-    plt.title(f"LDA vs. LSI Accuracy")
+    plt.title(f"LDA vs. LSI Accuracy Using 6 Topics")
     plt.legend(loc="best")
     plt.tight_layout()
-    plt.savefig(os.path.join(MAIN_PATH, f"results.png"))
+    plt.savefig(os.path.join(MAIN_PATH, "..", f"lda_vs_lsi_results.png"))
 
 
 if __name__ == "__main__":
-    plot_results()
+    plot_initial_results()
+    plot_lda_results()
